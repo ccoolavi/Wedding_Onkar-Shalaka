@@ -269,59 +269,6 @@
             transform: scale(1.05);
         }
 
-        /* Gift Section */
-        .gift-section {
-            padding: 30px 20px;
-            background: linear-gradient(135deg, var(--accent-color) 0%, #ffffff 100%);
-        }
-
-        .gift-container {
-            max-width: 100%;
-            margin: 0 auto;
-        }
-
-        .qr-code-box {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            margin: 20px 0;
-        }
-
-        .qr-image {
-            width: 100%;
-            max-width: 250px;
-            height: auto;
-            margin: 15px auto;
-            display: block;
-        }
-
-        .upi-id {
-            background: #f0f0f0;
-            padding: 12px;
-            border-radius: 6px;
-            font-family: monospace;
-            font-size: 14px;
-            word-break: break-all;
-            margin: 15px 0;
-        }
-
-        .copy-btn {
-            padding: 10px 20px;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .copy-btn:hover {
-            background: var(--secondary-color);
-        }
-
         /* RSVP Section */
         .rsvp-section {
             padding: 30px 20px;
@@ -536,7 +483,7 @@
             }
 
             .event-details {
-                font-size: 13px;
+                font-size: 12px;
             }
 
             .action-btn {
@@ -547,6 +494,15 @@
 
             .qr-image {
                 max-width: 200px;
+            }
+
+            .upload-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            footer {
+                font-size: 12px;
             }
         }
 
@@ -690,26 +646,6 @@
             </div>
         </section>
 
-        <!-- Gift Section -->
-        <section class="gift-section">
-            <h2 class="section-title" data-marathi="उपहार व आशीर्वाद" data-english="Gift & Blessings">उपहार व आशीर्वाद</h2>
-            
-            <div class="gift-container">
-                <div class="qr-code-box">
-                    <p data-marathi="आम्हांला आपल्या प्रेमाने भरलेल्या आशीर्वादांची गरज आहे। आर्थिक उपहारांसाठी खाली QR कोड स्कॅन करा:" data-english="We would be blessed by your presence and wishes. Scan the QR code below to send a gift:">आम्हांला आपल्या प्रेमाने भरलेल्या आशीर्वादांची गरज आहे। आर्थिक उपहारांसाठी खाली QR कोड स्कॅन करा:</p>
-                    
-                    <!-- Placeholder for QR code (replace with your actual QR code) -->
-                    <div style="background: #f0f0f0; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                        <p data-marathi="आपले QR कोड इथे येईल" data-english="Your QR Code will go here">आपले QR कोड इथे येईल</p>
-                    </div>
-
-                    <p style="margin-top: 20px; font-weight: 600;" data-marathi="किंवा खाली UPI ID वापरा:" data-english="Or use the UPI ID below:">किंवा खाली UPI ID वापरा:</p>
-                    <div class="upi-id">groom@upi</div>
-                    <button class="copy-btn" onclick="copyToClipboard('groom@upi')" data-marathi="कॉपी करा" data-english="Copy">कॉपी करा</button>
-                </div>
-            </div>
-        </section>
-
         <!-- RSVP Section -->
         <section class="rsvp-section">
             <h2 class="section-title" data-marathi="कृपया RSVP करा" data-english="Please RSVP">कृपया RSVP करा</h2>
@@ -766,9 +702,9 @@
     </footer>
 
     <script>
-        // Replace with your Cloudinary credentials
-        const CLOUDINARY_CLOUD_NAME = 'YOUR_CLOUDINARY_CLOUD_NAME';
-        const CLOUDINARY_UPLOAD_PRESET = 'YOUR_UPLOAD_PRESET';
+        // Updated Cloudinary API Key and Folder
+        const CLOUDINARY_CLOUD_NAME = 'anonymous';
+        const CLOUDINARY_UPLOAD_PRESET = 'Wedding_memories';
 
         // Current Language
         let currentLanguage = localStorage.getItem('weddingLanguage') || 'mr';
