@@ -702,9 +702,9 @@
     </footer>
 
     <script>
-        // Updated Cloudinary API Key and Folder
+        // Corrected Cloudinary configuration
         const CLOUDINARY_CLOUD_NAME = 'anonymous';
-        const CLOUDINARY_UPLOAD_PRESET = 'Wedding_memories';
+        const CLOUDINARY_UPLOAD_PRESET = 'Wedding_memories'; // Ensure this preset exists in your Cloudinary account
 
         // Current Language
         let currentLanguage = localStorage.getItem('weddingLanguage') || 'mr';
@@ -809,7 +809,7 @@ END:VCALENDAR`;
                     resourceType: 'auto',
                     multiple: true,
                     maxFileSize: 50000000,
-                    folder: 'wedding-memories'
+                    folder: 'Wedding_memories'
                 },
                 (error, result) => {
                     const statusDiv = document.getElementById('uploadStatus');
